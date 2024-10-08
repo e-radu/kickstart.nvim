@@ -273,6 +273,20 @@ require('lazy').setup({
       },
     },
   },
+  {
+    'mistricky/codesnap.nvim',
+    build = 'make build_generator',
+    opts = {
+      border = { 'rounded' },
+      has_breadcrumbs = { true },
+      bg_theme = { 'grape' },
+      watermark = { '' },
+    },
+    keys = {
+      { '<leader>cc', '<cmd>CodeSnap<cr>', mode = 'x', desc = 'Save selected code snapshot into clipboard' },
+      -- { "<leader>cs", "<cmd>CodeSnapSave<cr>", mode = "x", desc = "Save selected code snapshot in ~/Pictures" },
+    },
+  },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
