@@ -112,6 +112,25 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', 'QQ', ':q!<enter>', { desc = 'Quit discarding changes' })
 vim.keymap.set('n', 'WW', ':w!<enter>', { desc = 'Write buffer to file' })
+
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = 'Move up one line' })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = 'Move down one line' })
+
+vim.keymap.set('n', '<C-W>,', ':vertical resize -10<CR>', { noremap = true, desc = 'Resize split window vertically by -10' })
+vim.keymap.set('n', '<C-W>.', ':vertical resize +10<CR>', { noremap = true, desc = 'Resize split window vertically by -10' })
+vim.keymap.set('n', '<space><space>', '<cmd>set nohlsearch<CR>')
+-- Quicker close split
+vim.keymap.set('n', '<leader>qq', ':q<CR>', { silent = true, noremap = true, desc = 'Close split window' })
+
+-- Keymaps for better default experience
+-- See `:help vim.keymap.set()`
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true, desc = 'Remapped space to nop' })
+vim.keymap.set('n', 'E', '$', { noremap = false, desc = 'Jump to [E]nd of line' })
+vim.keymap.set('n', 'B', '^', { noremap = false, desc = 'Jump to [B]eginning of line' })
+vim.keymap.set('n', 'TT', ':TransparentToggle<CR>', { noremap = true, desc = '[T]oggle [T]ransparent mode' })
+vim.keymap.set('n', 'ss', ':noh<CR>', { noremap = true, desc = 'noh ???' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
