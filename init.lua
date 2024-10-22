@@ -80,6 +80,11 @@ vim.opt.scrolloff = 10
 -- Set completeopt to have a better completion experience
 vim.opt.completeopt = 'menuone,noselect'
 
+-- Convert tab to spaces
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
