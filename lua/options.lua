@@ -1,9 +1,3 @@
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 vim.g.loaded_netew = true
 vim.g.loaded_netrwPlugin = true
 
@@ -75,7 +69,7 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Set colorscheme
--- vim.cmd.colorscheme 'catppuccin'
+-- vim.cmd.colorscheme 'catppuccin-macchiato'
 
 -- Set completeopt to have a better completion experience
 vim.opt.completeopt = 'menuone,noselect'
