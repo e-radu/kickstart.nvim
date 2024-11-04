@@ -30,6 +30,7 @@ require('lazy').setup({
   require 'plugins.comment',
   require 'plugins.blankline',
   require 'plugins.alpha',
+  require 'plugins.avante'
   -- require 'plugins.gitsigns',
   -- require 'plugins.obsidian',
   -- require 'plugins.trouble'
